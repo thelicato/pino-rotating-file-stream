@@ -1,11 +1,11 @@
 import { createStream, Options } from 'rotating-file-stream';
 
-export interface IPinoRotatingFileStreamOptions extends Options {
+export interface PinoRotatingFileStreamOptions extends Options {
   filename: string;
   path: string;
 }
 
-export default (options: IPinoRotatingFileStreamOptions) => {
+export default (options: PinoRotatingFileStreamOptions) => {
   const { filename, size, maxSize, interval, compress, path } = options;
   return createStream(filename, {
     ...options,

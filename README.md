@@ -6,6 +6,8 @@
 
 This module provides a **transport** for *pino* to automatically rotates logs. Under the hood, it uses [rotating-file-stream](https://www.npmjs.com/package/rotating-file-stream) even though some fields have been added to the default *Options*.
 
+## CLI
+The current version of this packages has only support for the module usage as described in the [Programmatic Integration](#programmatic-integration) section. This feature will be added ASAP.
 ## Programmatic Integration
 Install ``pino-rotating-file-stream`` alongside ``pino`` and set the transport to ``pino-rotating-file-stream``:
 
@@ -23,6 +25,8 @@ const logger = pino({
 
 logger.info('hi')
 ```
+
+See also the example in the ``examples`` folder.
 
 ### Options
 The options are essentially the same provided by ``rotating-file-stream`` except form two new entries. The following list shows all the options with the default values:

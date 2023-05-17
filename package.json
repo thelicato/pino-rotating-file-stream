@@ -36,7 +36,7 @@
     "build-mjs": "tsc -p tsconfig.mjs.json && tsc-alias -p tsconfig.mjs.json",
     "build-cjs": "tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "build": "pnpm build-mjs && pnpm build-cjs",
-    "prepare": "pnpm build"
+    "prepublishOnly": "pnpm build"
   },
   "typeScriptVersion": "3.7",
   "devDependencies": {
@@ -45,6 +45,7 @@
     "pnpm": "^8.5.1",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.5",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {

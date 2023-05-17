@@ -1,0 +1,32 @@
+{
+  "include": ["src"],
+  "exclude": ["dist"],
+  "ts-node": {
+    "files": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "lib": ["ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "useUnknownInCatchVariables": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

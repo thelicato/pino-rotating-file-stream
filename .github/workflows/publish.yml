@@ -25,5 +25,5 @@ jobs:
           package-manager-cache: false
 
       - run: npm ci
-      - run: npm run build
-      - run: npm publish --access public --provenance
+      - run: npm test
+      - run: npm publish --access public

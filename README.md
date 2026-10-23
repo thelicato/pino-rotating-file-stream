@@ -30,15 +30,15 @@ logger.info('hi')
 See also the example in the ``examples`` folder.
 
 ### Options
-The options are essentially the same provided by ``rotating-file-stream`` except form two new entries. The following list shows all the options with the default values:
+The options are the same provided by ``rotating-file-stream`` except for the required ``filename`` and ``path``. Options are passed through without wrapper defaults. In particular, size rotation, interval rotation, rotated-file size limits, and compression are disabled unless configured; see ``rotating-file-stream`` for its defaults and option details:
 ```js
 {
   filename: string; // Specifies the name of the file. Required.
   path: string // Specifies the base path for files. Required.
-  size: string // Specifies the file size to rotate the file. Default: '100M'.
-  maxSize: string // Specifies the maximum size of rotated files to keep. Default: '1G'.
-  interval: string // Specifies the time interval to rotate the file. Default: '7d'.
-  compress: boolean | string | Function // Specifies compression method of rotated files. Default: 'gzip'.
+  size: string // Specifies the file size to rotate the file.
+  maxSize: string // Specifies the maximum size of rotated files to keep.
+  interval: string // Specifies the time interval to rotate the file.
+  compress: boolean | string | Function // Specifies compression method of rotated files.
   encoding: string // Specifies the default encoding. Default: 'utf8'.
   history: string // Specifies the history filename. Default: null.
   immutable: boolean // Never mutate file names. Default: null.

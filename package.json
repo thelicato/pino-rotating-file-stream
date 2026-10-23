@@ -36,6 +36,7 @@
     "build-mjs": "tsc -p tsconfig.mjs.json && tsc-alias -p tsconfig.mjs.json",
     "build-cjs": "tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "build": "npm run build-mjs && npm run build-cjs",
+    "test": "npm run build && node --test",
     "prepublishOnly": "npm run build"
   },
   "typeScriptVersion": "3.7",
